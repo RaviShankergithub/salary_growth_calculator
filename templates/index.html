@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Salary Growth Calculator</title>
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            margin-top: 100px;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .card-title {
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 0.8em;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Salary Growth Calculator</h1>
+        <form action="/calculate" method="post">
+            <div class="form-group">
+                <label for="past_salary">Past Salary:</label>
+                <input type="number" class="form-control" id="past_salary" name="past_salary" required>
+            </div>
+            <div class="form-group">
+                <label for="current_salary">Current Salary:</label>
+                <input type="number" class="form-control" id="current_salary" name="current_salary" required>
+            </div>
+            <div class="form-group">
+                <label for="cagr_years">Years between Past and Current Salary:</label>
+                <input type="number" class="form-control" id="cagr_years" name="cagr_years" required>
+            </div>
+            <div class="form-group">
+                <label for="future_years">Years to Predict Future Salary:</label>
+                <input type="number" class="form-control" id="future_years" name="future_years" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Calculate</button>
+        </form>
+    </div>
+    <div class="footer">
+        Developed by Ravi Shanker Lal
+        <a href="https://www.linkedin.com/in/ravi-shanker-lal-96540819/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
